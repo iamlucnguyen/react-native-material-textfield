@@ -119,6 +119,8 @@ class Example extends Component {
  onChangeText          | Change text callback                        | Function | -
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
+ required              | Add required label *                        | Boolean  | -
+ labelColor            | Label color                                 | String   | -
 
 Other [TextInput][rn-textinput] properties will also work.
 
