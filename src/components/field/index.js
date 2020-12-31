@@ -62,7 +62,7 @@ export default class TextField extends PureComponent {
     lineType: 'solid',
     disabledLineType: 'dotted',
 
-    disabled: false,
+	disabled: false
   };
 
   static propTypes = {
@@ -118,7 +118,9 @@ export default class TextField extends PureComponent {
     suffix: PropTypes.string,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+	inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+	required: PropTypes.bool,
+	labelColor: PropTypes.string
   };
 
   static inputContainerStyle = styles.inputContainer;
@@ -499,7 +501,7 @@ export default class TextField extends PureComponent {
       label,
       fontSize,
       labelFontSize,
-      labelTextStyle,
+	  labelTextStyle,
     } = this.props;
 
     return (
@@ -647,7 +649,9 @@ export default class TextField extends PureComponent {
       baseColor,
       errorColor,
       containerStyle,
-      inputContainerStyle: inputContainerStyleOverrides,
+	  inputContainerStyle: inputContainerStyleOverrides,
+	  required,
+	  labelColor
     } = this.props;
 
     let restricted = this.isRestricted();
@@ -688,7 +692,10 @@ export default class TextField extends PureComponent {
       contentInset,
 
       focusAnimation,
-      labelAnimation,
+	  labelAnimation,
+	  
+	  required,
+	  labelColor
     };
 
     let lineProps = {
